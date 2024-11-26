@@ -1,0 +1,18 @@
+<header>
+    <nav class="navbar">
+        <!-- Left side -->
+        <div class="nav-left">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/employees" class="nav-link">Employees</a>
+        </div>
+        <!-- Right side -->
+        <div class="nav-right">
+            <% if (user) { %>
+                <a href="/logout" class="nav-link">Logout</a>
+            <% } else { %>
+                <a href="/login" class="nav-link">Login</a>
+                <a href="/signup" class="nav-link">Signup</a>
+            <% } %>
+        </div>
+    </nav>
+</header>

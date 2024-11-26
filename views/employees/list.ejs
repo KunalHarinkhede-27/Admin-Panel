@@ -1,0 +1,93 @@
+<%- include('../includes/header.ejs') %>
+<link rel="stylesheet" href="/css/styles.css">
+
+<div class="container">
+    <h1>Employee List</h1>
+
+    <% if (isAdmin) { %>
+        <!-- Create Employee Button -->
+        <div class="admin-panel-header" style="margin-bottom: 20px;">
+            <a href="employees/create" class="btn btn-primary">Create Employee</a>
+        </div>
+    <% } %>
+
+    <!-- Search Section visible only when logged in -->
+    <% if (user) { %>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search employees..." onkeyup="searchEmployees()" style="padding: 5px; width: 80%; max-width: 400px;">
+            <button onclick="searchEmployees()" class="btn btn-primary">Search</button>
+        </div>
+    <% } %>
+
+    <!-- Table Layout (Visible on Larger Screens) -->
+    <div class="table-container">
+        <table class="employee-table">
+            <thead>
+                <tr>
+                    <th>Unique ID</th>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Designation</th>
+                    <th>Gender</th>
+                    <th>Course</th>
+                    <th>Created Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% employees.forEach(employee => { %>
+                    <tr>
+                        <td><%= employee._id %></td>
+                        <td><img src="<%= employee.image %>" alt="Employee Image" width="100" height="100"></td>
+                        <td><%= employee.name %></td>
+                        <td><%= employee.email %></td>
+                        <td><%= employee.mobile %></td>
+                        <td><%= employee.designation %></td>
+                        <td><%= employee.gender %></td>
+                        <td><%= employee.course %></td>
+                        <td><%= new Date(employee.createDate).toLocaleDateString() %></td>
+                        <td>
+                            <a href="employees/edit/<%= employee._id %>">Edit</a>
+                            <form method="post" action="employees/delete/<%= employee._id %>?_method=DELETE">
+                                <button type="submit" id="deletebtn">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Cards Layout (Visible on Smaller Screens) -->
+    <div class="employee-cards">
+        <% employees.forEach(employee => { %>
+            <div class="employee-card">
+                <div class="employee-image">
+                    <img src="<%= employee.image %>" alt="Employee Image" width="100" height="100">
+                </div>
+                <div class="employee-info">
+                    <h3><%= employee.name %></h3>
+                    <p><strong>Email:</strong> <%= employee.email %></p>
+                    <p><strong>Mobile:</strong> <%= employee.mobile %></p>
+                    <p><strong>Designation:</strong> <%= employee.designation %></p>
+                    <p><strong>Gender:</strong> <%= employee.gender %></p>
+                    <p><strong>Course:</strong> <%= employee.course %></p>
+                    <p><strong>Created Date:</strong> <%= new Date(employee.createDate).toLocaleDateString() %></p>
+                    <div class="employee-actions">
+                        <a href="employees/edit/<%= employee._id %>" class="btn">Edit</a>
+                        <form method="post" action="employees/delete/<%= employee._id %>?_method=DELETE">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/scripts.js"></script>
+<%- include('../includes/footer.ejs') %>

@@ -1,0 +1,21 @@
+<%- include('../includes/header.ejs') %>
+<link rel="stylesheet" href="/css/styles.css">
+    <h1>Sign Up</h1>
+    <form action="/signup" method="post" class="needs-validation" novalidate>
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" name="confirmPassword" required>
+        <label for="role">Role:</label>
+        <select name="role" required>
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+        </select>
+        <button type="submit">Sign Up</button>
+    </form>
+    <p style="display: flex; justify-content: center; margin: 10px;">Already have an account?<a href="/login">Login here</a></p>
+    <%- include('../includes/footer.ejs') %>

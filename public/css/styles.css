@@ -1,0 +1,315 @@
+/* General page styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 20px 20px 0px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Full-width container */
+.container {
+    width: 100%;
+    padding: 10px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* Admin Panel Header */
+.admin-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.admin-panel-header h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.admin-panel-header .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin:10px 10px 10px 0px
+}
+
+.admin-panel-header .btn:hover {
+    background-color: #007bff;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 5px;
+    text-align: left;
+}
+
+table th {
+    background-color: #333;
+    color: rgb(241, 239, 239);
+}
+
+table td img {
+    width: 100px;
+    height: 100px; 
+}
+
+/* Employee Cards layout */
+.employee-cards {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.employee-card {
+    background: #fff;
+    padding: 15px;
+    margin: 10px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.employee-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.employee-info {
+    margin-left: 15px;
+}
+
+.employee-actions {
+    margin-top: 10px;
+}
+
+.employee-actions .btn {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.employee-actions .btn:hover {
+    background-color: #218838;
+}
+
+.employee-actions form button {
+    background-color: #dc3545;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+.employee-actions form button:hover {
+    background-color: #236ac8;
+}
+/* Form page styles (Login, Signup) */
+form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #009dff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #009dff;
+    cursor: pointer;
+}
+
+/* Make the page responsive */
+@media (max-width: 768px) {
+    .employee-table {
+        display: none;
+    }
+
+    .employee-cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .employee-card {
+        width: 100%;
+    }
+
+    .admin-panel-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .employee-actions .btn {
+        padding: 6px 12px;
+    }
+
+    .employee-actions form button {
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .admin-panel-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .employee-actions .btn {
+        padding: 5px 10px;
+    }
+
+    .employee-actions form button {
+        padding: 5px 10px;
+    }
+}
+
+/* General Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 5px 5px 0px 0px;
+    color: white;
+    
+}
+
+.nav-left a, .nav-right a {
+    color: white;
+    text-decoration: none;
+    margin: 0px 10px;
+    font-size: 16px;
+}
+
+.nav-left a:hover, .nav-right a:hover {
+    color: #f39c12; /* Highlight color on hover */
+}
+
+/* Aligning the left and right sections */
+.nav-left {
+    display: flex;
+}
+
+.nav-right {
+    display: flex;
+}
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .nav-left, .nav-right {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-left a, .nav-right a {
+        margin: 10px 0;
+    }
+
+    .nav-right {
+        margin-top: 10px;
+    }
+}
+/* Styling for the search bar */
+.search-bar {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    width: 80%;
+    max-width: 400px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    padding: 5px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Make sure to hide cards on larger screens and table on small screens */
+@media (max-width: 768px) {
+    .employee-table {
+        display: none;
+    }
+
+    .employee-cards {
+        display: flex;
+    }
+}
+
+@media (min-width: 769px) {
+    .employee-table {
+        display: block;
+    }
+
+    .employee-cards {
+        display: none;
+    }
+}
+
+#deletebtn{
+    background-color: red;
+}

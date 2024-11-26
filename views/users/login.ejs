@@ -1,0 +1,12 @@
+<%- include('../includes/header.ejs') %>
+<link rel="stylesheet" href="/css/styles.css">
+    <h1>Login</h1>
+    <form action="/login" method="post" class="needs-validation" novalidate>
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
+        <button type="submit">Login</button>
+    </form>
+    <p style="display: flex; justify-content: center; margin: 10px;">Don't have an account?<a href="/signup">Sign up here</a></p>
+<%- include('../includes/footer.ejs') %>
