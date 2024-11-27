@@ -1,6 +1,6 @@
 <%- include('../includes/header.ejs') %>
 <link rel="stylesheet" href="/css/styles.css">
-    <h1>Sign Up</h1>
+    <h1 style="margin: 15px 15px 15px 10px;">Sign Up</h1>
     <form action="/signup" method="post" class="needs-validation" novalidate>
         <label for="name">Name:</label>
         <input type="text" name="name" required>
@@ -18,4 +18,5 @@
         <button type="submit">Sign Up</button>
     </form>
     <p style="display: flex; justify-content: center; margin: 10px;">Already have an account?<a href="/login">Login here</a></p>
+    <br><br>
     <%- include('../includes/footer.ejs') %>

@@ -18,6 +18,7 @@ const upload = multer({ storage: storage });
 
 // Main page (no authentication needed)
 router.get('/', employeeController.getAllEmployees);
+router.get('/home',employeeController.gethomepage);
 
 // Authentication-protected routes
 router.get('/create', ensureAuthenticated, requireRole('admin'), employeeController.renderCreatePage);

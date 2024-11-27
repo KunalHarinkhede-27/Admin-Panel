@@ -68,36 +68,36 @@ app.use((req, res, next) => {
 });
 
 // Frontend routes
-app.get('/', (req, res) => res.redirect('/employees'));
-app.get('/employees', async (req, res) => {
-    try {
-        const Employee = require('./models/Employee');
-        const employees = await Employee.find().sort({ createDate: -1 });
+// app.get('/home', (req, res) => res.render('/employees/home'));
+// app.get('/employees', async (req, res) => {
+//     try {
+//         const Employee = require('./models/Employee');
+//         const employees = await Employee.find().sort({ createDate: -1 });
 
-        console.log('Body value:', './employees/list');
-        console.log('Employees fetched:', employees);
+//         console.log('Body value:', './employees/list');
+//         console.log('Employees fetched:', employees);
 
-        res.render('layouts/main', {
-            title: 'Employee List',
-            body: './employees/list', // Path to the partial
-            employees: employees,
-        });
-    } catch (error) {
-        console.error('Route error:', error.stack);
-        res.status(500).send('Internal Server Error');
-    }
-});
+//         res.render('layouts/main', {
+//             title: 'Employee List',
+//             body: './employees/list', // Path to the partial
+//             employees: employees,
+//         });
+//     } catch (error) {
+//         console.error('Route error:', error.stack);
+//         res.status(500).send('Internal Server Error');
+//     }
+// });
 
 
-app.get('/employees/edit/:id', async (req, res) => {
-    const Employee = require('./models/Employee');
-    const employee = await Employee.findById(req.params.id);
-    res.render('layouts/main', {
-        title: 'Edit Employee',
-        body: 'employees/edit',
-        employee: employee
-    });
-});
+// app.get('/employees/edit/:id', async (req, res) => {
+//     const Employee = require('./models/Employee');
+//     const employee = await Employee.findById(req.params.id);
+//     res.render('layouts/main', {
+//         title: 'Edit Employee',
+//         body: 'employees/edit',
+//         employee: employee
+//     });
+// });
 
 
 const PORT = 5000;

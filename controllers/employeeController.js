@@ -3,6 +3,15 @@ const multer = require('multer');
 const path = require('path');
 
 
+const gethomepage=async (req,res)=>{
+    try {
+        const employees = await Employee.find({});
+        res.render('employees/home', { employees, title: 'Home page' });
+    } catch (error) {
+        res.status(500).send('Error retrieving home page');
+    }
+}
+
 // Get all employees (Main page)
 const getAllEmployees = async (req, res) => {
     try {
@@ -114,4 +123,5 @@ module.exports = {
     renderEditPage,
     editEmployee,
     deleteEmployee,
+    gethomepage,
 };

@@ -60,7 +60,7 @@ const login = async (req, res) => {
 
         // Redirect to main page on success
         req.session.user = { id: user._id, role: user.role };
-        res.redirect('/'); // Ensure '/main' route exists and serves the main page
+        res.redirect('/employees'); // Ensure '/main' route exists and serves the main page
     } catch (error) {
         console.error("Error during login:", error);
         res.status(500).render('users/login', { message: 'Server error' });

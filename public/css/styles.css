@@ -26,7 +26,7 @@ header h1 {
 .container {
     width: 100%;
     padding: 10px;
-    max-width: 1280px;
+    max-width: 1290px;
     margin: 0 auto;
 }
 
@@ -220,9 +220,16 @@ form button:hover {
     justify-content: space-between;
     align-items: center;
     background-color: #333;
-    padding: 5px 5px 0px 0px;
+    padding: 15px 15px 15px 0px;
     color: white;
-    
+
+    /* Make the navbar fixed */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure the navbar spans the full width */
+    z-index: 1000; /* Keeps the navbar above other content */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
 }
 
 .nav-left a, .nav-right a {
@@ -244,6 +251,12 @@ form button:hover {
 .nav-right {
     display: flex;
 }
+
+/* Add margin to the body to avoid content being hidden under the navbar */
+body {
+    margin-top: 50px; /* Adjust this based on the navbar height */
+}
+
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     .navbar {
@@ -313,3 +326,63 @@ form button:hover {
 #deletebtn{
     background-color: red;
 }
+
+.admin-panel-heading {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Make the container take the full height of the viewport */
+    margin: 0; /* Remove default margins */
+    font-size: 2.5rem; /* Adjust font size as needed */
+    color: #333; /* Optional: Text color */
+    background-color: #f8f9fa; /* Optional: Background color */
+}
+
+@media (max-width: 768px) {
+    .admin-panel-heading {
+        font-size: 1.5rem; /* Adjust size for tablets and small screens */
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-panel-heading {
+        font-size: 1.2rem; /* Adjust size for mobile devices */
+    }
+}
+/* Apply to the entire page */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure the page takes full height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content area */
+.main-content {
+    flex: 1; /* Allow this area to grow and take available space */
+}
+
+/* Footer styling */
+footer {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+
+    /* Fix footer at the bottom */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Ensure the footer spans the full width */
+    z-index: 1000; /* Ensure it's above other content */
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}
+
+body {
+    /* Prevent content from being overlapped by the fixed footer */
+    margin-bottom: 50px; /* Adjust based on the footer's height */
+}
+
+
