@@ -26,7 +26,7 @@ JWT Authentication (role-based access)
 - signup page
   ![Screenshot 2025-01-31 141616](https://github.com/user-attachments/assets/d76dfe8b-a503-432c-9d44-4453db7f234a)
 
--login page
+- login page
   ![Screenshot 2025-01-31 141640](https://github.com/user-attachments/assets/02d7780e-de73-46c3-8ebf-7bfd44e5f8e4)
 
 * Getting Started
