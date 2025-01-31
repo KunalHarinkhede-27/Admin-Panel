@@ -29,5 +29,15 @@ then install all packages listed in the package.json
 then
 node app.js
 
+* Screenshot
+- employee page
+  ![Screenshot 2025-01-31 141547](https://github.com/user-attachments/assets/2aa5d03b-5a86-49ed-bcea-15e53a52c339)
+
+- signup page
+  ![Screenshot 2025-01-31 141616](https://github.com/user-attachments/assets/d76dfe8b-a503-432c-9d44-4453db7f234a)
+
+-login page
+  ![Screenshot 2025-01-31 141640](https://github.com/user-attachments/assets/02d7780e-de73-46c3-8ebf-7bfd44e5f8e4)
+
 * Contact
 - If you have any queries, feel free to reach out at Email: kunalharinkhede277@gmail.com
