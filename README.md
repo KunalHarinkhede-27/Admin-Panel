@@ -19,16 +19,6 @@ JWT Authentication (role-based access)
 - Secure API handling with JWT authentication
 - CRUD operations for efficient data management
 
-* Getting Started
-- Clone the Repository
-git clone https://github.com/KunalHarinkhede-27/Admin-Panel.git
-cd admin-panel
-Setup
-First npm install
-then install all packages listed in the package.json
-then
-node app.js
-
 * Screenshot
 - employee page
   ![Screenshot 2025-01-31 141547](https://github.com/user-attachments/assets/2aa5d03b-5a86-49ed-bcea-15e53a52c339)
@@ -38,6 +28,16 @@ node app.js
 
 -login page
   ![Screenshot 2025-01-31 141640](https://github.com/user-attachments/assets/02d7780e-de73-46c3-8ebf-7bfd44e5f8e4)
+
+* Getting Started
+- Clone the Repository
+git clone https://github.com/KunalHarinkhede-27/Admin-Panel.git
+- cd admin-panel
+* Setup
+- First npm install
+- then install all packages listed in the package.json
+- then
+- node app.js
 
 * Contact
 - If you have any queries, feel free to reach out at Email: kunalharinkhede277@gmail.com
